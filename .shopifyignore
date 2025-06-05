@@ -1,13 +1,11 @@
-# This file contains a list of files that will be excluded from Shopify CLI
-# operations such as push, pull, dev, etc.
-#
-# Examples:
-#
-# Ignore a specific file:
-#   templates/product.json
-#
-# Ignore templates with a wildcard pattern:
-#   templates/*.json
-#
-# Ignore templates and sections with a regular expression:
-#   /(templates|sections)/.*\.json/
+# Ігноруємо конкретний файл шаблону gift_card.liquid
+templates/gift_card.liquid
+
+# Приклад ігнорування всіх json-шаблонів у templates (якщо потрібно)
+templates/*.json
+
+# Ігнорування всіх json-шаблонів у sections (якщо потрібно)
+sections/*.json
+
+# Ігнорування інших файлів або папок можна додати сюди
+# assets/some-large-file.js

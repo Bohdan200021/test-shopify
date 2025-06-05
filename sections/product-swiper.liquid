@@ -1,0 +1,71 @@
+{% schema %}
+{
+  "name": "Product Color Swiper",
+  "tag": "section",
+  "class": "product-color-swiper",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Product Color Swiper"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="product-page-container">
+  <div class="product-content-wrapper">
+    <div class="product-image-column">
+      <div class="main-image-swiper swiper">
+        <div class="swiper-wrapper"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+
+    <div class="product-info-column">
+      <h1 class="product-title">Samsung Galaxy A56 5G </h1>
+      <p class="product-price">20000 UAH</p>
+      
+      <div class="color-selection">
+        <label>Color: <span id="selected-color"></span></label>
+        <div class="color-swiper-container">
+          <div class="swiper colorSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide color-option" data-color="Gray" data-images='["{{ "img01.webp" | asset_url }}", "{{ "img02.webp" | asset_url }}"]'>
+                <div class="color-circle" style="background-color:#9e9e9e;"></div>
+              </div>
+              <div class="swiper-slide color-option" data-color="Olive" data-images='["{{ "img03.webp" | asset_url }}", "{{ "img04.webp" | asset_url }}"]'>
+                <div class="color-circle" style="background-color: rgb(128, 128, 0);"></div>
+              </div>
+              <div class="swiper-slide color-option" data-color="Pink" data-images='["{{ "img05.webp" | asset_url }}", "{{ "img06.webp" | asset_url }}"]'>
+                <div class="color-circle" style="background-color: rgb(255, 153, 255);"></div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="size-selection">
+        <label>Size: One Size</label>
+      </div>
+      
+      <button class="add-to-cart-btn">Add to cart</button>
+      
+      <div class="product-description">
+        <p>Екран (6.7", Super AMOLED, 2340x1080) / Samsung Exynos 1580 (1 x 2.9 ГГц + 3 x 2.6 ГГц + 4 x 1.95 ГГц) / основна потрійна камера: 50 Мп + 12 Мп + 5 Мп, фронтальна 12 Мп / RAM 8 ГБ / 256 ГБ вбудованої пам'яті / 3G / LTE / 5G / GPS / підтримка 2х SIM-карт (Nano-SIM, eSIM) / Android 15 / 5000 мА*год</p>
+        <div class="product-links">
+          <a href="#">Size guide</a>
+          <a href="#">Model's size</a>
+          <a href="#">Details</a>
+          <a href="#">Care guide</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ 'theme.css' | asset_url | stylesheet_tag }}
+{{ 'main.js' | asset_url | script_tag }}
